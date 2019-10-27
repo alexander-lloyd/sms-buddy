@@ -41,7 +41,7 @@ def index():
 
 @app.route('/new-user', methods=['POST'])
 def new_user():
-    from_number = request.vallues.get('From', None)
+    from_number = request.values.get('From', None)
     name = request.values.get('Body', None)
     resp = MessagingResponse()
 
