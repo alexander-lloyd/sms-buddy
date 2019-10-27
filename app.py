@@ -7,7 +7,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 # Emoji is hugging emoji
 YOURE_ALL_SIGNED_UP = 'Hey {name}! You are all signed up! \U0001F917.' \
-                      ' To unsubscribe reply \'Unsubscribe\''
+                      ' If you ever want to unsubscribe send \'Unsubscribe\''
 UNSUBSCRIBED_MESSAGE = 'Sorry to see you go \U0001F641'
 ALREADY_SIGNED_UP = 'Hey {name}, you\' already signed up!'
 configs = {
