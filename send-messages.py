@@ -9,14 +9,14 @@ from app import User
 QUOTES = open('quotes.txt').read().split('\n')[0:-1]  # Last is an empty line.
 NUMBER_QUOTES = len(QUOTES)
 MESSAGE_FORMAT = 'Hey {name}! Here\'s your daily motivational quote: {quote}'
-FROM_NUMBER = ''
+FROM_NUMBER = os.environ['PHONE_NUMBER']
 ACCOUNT_SID = os.environ['ACCOUNT_SID']
-AUTH_TOKEN = os.environ['AUTH_TOKEN']
+AUTH_TOKEN = os.environ['ACCOUNT_TOKEN']
 CLIENT = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 
 def send_message(from_number, to_number, message):
-    return Client.messages.create(
+    return CLIENT.messages.create(
       body=message,
       from_=from_number,
       to=to_number
