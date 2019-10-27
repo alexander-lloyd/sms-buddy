@@ -49,7 +49,7 @@ def new_user():
     if user_exists:
         if name.strip().lower() == 'unsubscribe':
             # remove user from DB
-            db.session.remove(user_exists)
+            user_exists.delete()
             resp.message = UNSUBSCRIBED_MESSAGE
         else:
             name = user_exists.name
