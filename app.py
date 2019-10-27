@@ -9,7 +9,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 YOURE_ALL_SIGNED_UP = 'Hey {name}! You are all signed up! \U0001F917.' \
                       ' If you ever want to unsubscribe send \'Unsubscribe\''
 UNSUBSCRIBED_MESSAGE = 'Sorry to see you go \U0001F641'
-ALREADY_SIGNED_UP = 'Hey {name}, you\' already signed up!'
+ALREADY_SIGNED_UP = 'Hey {name}, you\'ve already signed up! \U0001F60E'
 configs = {
   'development': 'config/development.py',
   'production': 'config/production.py'
