@@ -50,10 +50,10 @@ def new_user():
         if name.strip().lower() == 'unsubscribe':
             # remove user from DB
             user_exists.delete()
-            resp.message = UNSUBSCRIBED_MESSAGE
+            resp.message(UNSUBSCRIBED_MESSAGE)
         else:
             name = user_exists.name
-            resp.message = ALREADY_SIGNED_UP.format(name=name)
+            resp.message(ALREADY_SIGNED_UP.format(name=name))
     else:
         u = User(phone_number=from_number, name=name)
         db.session.add(u)
